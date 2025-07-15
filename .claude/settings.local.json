@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run build:*)",
+      "Bash(npm test)",
+      "Bash(node cli.js --help)",
+      "Bash(timeout:*)",
+      "Bash(true)",
+      "Bash(node:*)",
+      "Bash(curl:*)",
+      "Bash(pip3 install:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)"
+    ],
+    "deny": []
+  }
+}

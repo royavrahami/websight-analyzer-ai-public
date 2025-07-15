@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-07-15T19:23:51.982545",
+  "output_dir": "C:\\Users\\Roy Avrahami\\OneDrive\\PycharmProjects\\autoamtion_tools_roy\\playwright-mcp-analyzer-playwright-mcp-analyzer-new (1)\\playwright-mcp-analyzer-playwright-mcp-analyzer-new\\gui\\reports\\analysis_20250715_192342\\analysis_www_linkedin_com_20250715_192349",
+  "url": "https://www.linkedin.com/feed/",
+  "domain": "www_linkedin_com",
+  "page_title": "LinkedIn Login, Sign in | LinkedIn",
+  "urls": [
+    "https://www.linkedin.com/feed/"
+  ],
+  "dates": [
+    "2025/07/15"
+  ],
+  "analysis_type": "single_page"
+}

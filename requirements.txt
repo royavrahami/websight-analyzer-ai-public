@@ -1,0 +1,40 @@
+# Core Dependencies - Actually Used in the Project
+# ================================================
+
+# Browser Automation - Core functionality
+playwright>=1.40.0
+
+# Web Scraping and Crawling
+scrapy>=2.12.0
+requests>=2.32.0
+beautifulsoup4>=4.11.1
+
+# Data Validation and Models
+pydantic>=2.11.4
+
+# Optional AI Integration
+anthropic>=0.51.0
+
+# Web Testing (for generated test files)
+selenium>=4.18.1
+
+# HTTP Client for API Testing (API Hunter)
+httpx>=0.28.0
+
+# Data Processing
+pandas>=2.2.3
+
+# Optional GUI Enhancement (for development tools)
+ttkthemes>=3.2.2
+
+# Development and Testing
+pytest>=8.3.5
+pytest-playwright>=0.7.0
+
+# Utility packages that might be used
+typing-extensions>=4.13.2  # For better type hints
+
+# Standard Library Packages (no need to install, but documenting for reference)
+# tkinter - Built-in GUI library (used in web_analyzer_gui.py)
+# json, os, sys, pathlib, argparse, logging, datetime - All built-in
+# subprocess, platform, webbrowser, time, threading - All built-in
