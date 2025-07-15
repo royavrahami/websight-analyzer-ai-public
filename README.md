@@ -1,239 +1,255 @@
-# Playwright MCP Analyzer - Professional Edition
+# 🚀 **WebSight Analyzer AI - Professional Edition**
 
-## 🎯 Project Overview
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-brightgreen.svg)](https://python.org)
+[![Playwright](https://img.shields.io/badge/playwright-latest-orange.svg)](https://playwright.dev)
+[![MCP](https://img.shields.io/badge/MCP-integrated-purple.svg)](https://github.com/microsoft/mcp)
 
-Professional-grade automation framework combining Microsoft's MCP (Model Context Protocol) with comprehensive web analysis. This system provides accessibility-first testing, automated test generation, and production-ready QA tools.
+## 🎯 **Project Overview**
 
-## 📁 Project Structure
+**WebSight Analyzer AI** is a professional-grade automation framework that combines Microsoft's MCP (Model Context Protocol) with comprehensive web analysis capabilities. This system provides accessibility-first testing, automated test generation, API hunting, and production-ready QA tools.
+
+### ✨ **Key Features**
+
+- 🕷️ **Multi-Page Web Crawling** - Analyze entire websites systematically
+- 🕵️ **API Hunter** - Automatic API discovery and test generation
+- 🤖 **QA Automation** - AI-powered test suite generation
+- 🎨 **Professional GUI** - User-friendly interface for all operations
+- 📊 **Comprehensive Reports** - HTML, CSV, and interactive visualizations
+- ♿ **Accessibility Focus** - WCAG compliance and screen reader support
+- 🧪 **Test Generation** - Automated functional, negative, and API tests
+- 🔧 **MCP Integration** - Microsoft Model Context Protocol support
+
+## 🚀 **Quick Start**
+
+### Prerequisites
+
+```bash
+# Install Python 3.8+
+# Install Node.js 16+
+# Install Git
+```
+
+### Installation
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/royavrahami/websight-analyzer-ai-public.git
+cd websight-analyzer-ai-public
+```
+
+2. **Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+3. **Start the GUI:**
+```bash
+python gui/web_analyzer_gui.py
+```
+
+### 🎯 **Main Entry Points**
+
+#### 1. **🖥️ Professional GUI** (Recommended)
+```bash
+python gui/web_analyzer_gui.py
+```
+- Complete visual interface
+- Real-time progress tracking
+- Interactive results display
+- Multi-tab analysis management
+
+#### 2. **📱 Command Line Interface**
+```bash
+python scripts/working_crawler.py -u https://example.com -o results/
+```
+
+#### 3. **🔧 Direct Core Integration**
+```python
+from core.integrated_web_analyzer import WebAnalyzer
+
+analyzer = WebAnalyzer()
+results = analyzer.analyze_url("https://example.com")
+```
+
+## 📁 **Project Structure**
 
 ```
-playwright-mcp-analyzer-new/
-├── 📂 automation/           # Main automation frameworks
-│   ├── master_automation.py
-│   ├── mcp_enhanced_analyzer.py
-│   ├── mcp_with_progress.py
-│   └── batch_analyzer.py
-├── 📂 integrations/         # External service integrations
-│   ├── microsoft_mcp_integration.py
-│   └── mcp_playwright_integration.py
-├── 📂 examples/             # Example scripts and demos
-│   ├── demo_enhanced_automation.py
-│   ├── analyze_data_example.py
-│   └── direct_test.py
-├── 📂 versions/             # Alternative language versions
-│   ├── enhanced_mcp_master_automation_english.py
-│   └── mcp_automation_english.py
-├── 📂 core/                 # Core analysis modules
+websight-analyzer-ai-public/
+├── 📂 gui/                  # 🖥️ Professional GUI Interface
+│   └── web_analyzer_gui.py  # Main GUI application
+├── 📂 core/                 # 🔧 Core Analysis Modules
 │   ├── integrated_web_analyzer.py
 │   ├── playwright_web_elements_analyzer.py
-│   └── mcp/
-├── 📂 gui/                  # Graphical interfaces
-│   └── web_analyzer_gui.py
-├── 📂 client/               # Client connections
-│   └── mcp_client.py
-├── 📂 scripts/              # Utility scripts
-├── 📂 tests/                # Test files
-├── 📂 docs/                 # Documentation
+│   ├── agents/              # 🤖 AI Agents
+│   │   ├── api_hunter_agent.py
+│   │   └── api_hunter_integration.py
+│   └── automated_qa_orchestrator.py
+├── 📂 scripts/              # 📱 Command Line Tools
+│   ├── working_crawler.py   # Multi-page crawler
+│   ├── crawl_analyze.py     # Analysis scripts
+│   └── scrapy_integration.py
+├── 📂 playwright_mcp_server/ # 🔗 Microsoft MCP Server
+├── 📂 docs/                 # 📚 Documentation
 │   ├── AUTOMATION_GUIDE.md
 │   ├── WORKFLOW_GUIDE.md
 │   ├── HOW_TO_BUILD_MCP_PLAYWRIGHT.md
 │   ├── DATA_LOCATIONS_MAP.md
 │   └── SYSTEM_OVERVIEW.md
-├── 📂 playwright_mcp_server/ # Microsoft MCP server
-└── 📂 playwright-test/      # Playwright test configs
+├── 📂 integrations/         # 🔌 External Integrations
+├── 📂 client/               # 🌐 Client Connections
+└── 📂 playwright-test/      # 🧪 Test Configurations
 ```
 
-## 🚀 Quick Start
+## 🎨 **Features Overview**
+
+### 🕷️ **Multi-Page Web Crawling**
+- Systematic website analysis
+- Configurable depth and page limits
+- Robots.txt compliance
+- Visual progress tracking
+
+### 🕵️ **API Hunter**
+- Automatic API endpoint discovery
+- Real-time network traffic analysis
+- Automated test generation
+- Performance metrics
+
+### 🤖 **QA Automation**
+- AI-powered test suite generation
+- Functional, negative, and accessibility tests
+- Configurable test counts per category
+- Ready-to-run pytest templates
+
+### 🎯 **Professional GUI**
+- Dark/light theme
+- Real-time logging
+- Interactive results tables
+- Hyperlinked file navigation
+- Progress indicators
+
+## 🛠️ **Usage Examples**
+
+### GUI Mode (Recommended)
+1. Run: `python gui/web_analyzer_gui.py`
+2. Enter target URL
+3. Configure options (crawling, API hunting, QA automation)
+4. Click "START ANALYSIS"
+5. Monitor progress in real-time
+6. Explore results in the "Results" tab
+
+### Command Line Mode
+```bash
+# Basic analysis
+python scripts/working_crawler.py -u https://example.com -o results/
+
+# With crawling
+python scripts/working_crawler.py -u https://example.com -o results/ -p 20 -d 3
+
+# With headless mode
+python scripts/working_crawler.py -u https://example.com -o results/ --headless
+```
+
+## 📊 **Output Files**
+
+Each analysis generates:
+- `📊 analysis_report.html` - Interactive dashboard
+- `📋 all_elements.csv` - Structured data export
+- `🐍 page_object.py` - Playwright automation class
+- `🎯 selectors.py` - Element selector constants
+- `🧪 test_template.py` - Ready-to-use test templates
+- `🕵️ test_generated_apis.py` - API tests (if API Hunter enabled)
+- `📸 screenshot.png` - Full page capture
+- `📄 README.md` - Analysis summary
+
+## 🔧 **Configuration**
+
+### Environment Variables
+```bash
+# Optional: Set API keys for enhanced features
+export OPENAI_API_KEY="your-key-here"
+export ANTHROPIC_API_KEY="your-key-here"
+```
+
+### GUI Settings
+- **Crawling**: Enable multi-page analysis
+- **API Hunter**: Automatic API discovery
+- **QA Automation**: AI test generation
+- **Output Format**: HTML, CSV, JSON options
+
+## 🧪 **Testing**
+
+Run the included tests:
+```bash
+# Run all tests
+pytest
+
+# Run specific test categories
+pytest tests/test_core.py
+pytest tests/test_gui.py
+pytest tests/test_integrations.py
+```
+
+## 🚀 **Advanced Features**
+
+### MCP Integration
+- Microsoft Model Context Protocol support
+- Enhanced accessibility analysis
+- Advanced element detection
+- AI-powered insights
+
+### API Hunter
+- Real-time network monitoring
+- Automatic endpoint discovery
+- Performance analysis
+- Test generation
+
+### QA Automation
+- Functional test generation
+- Negative test scenarios
+- Accessibility validation
+- Load testing support
+
+## 📚 **Documentation**
+
+Comprehensive guides available in the `docs/` folder:
+- [📖 Automation Guide](docs/AUTOMATION_GUIDE.md)
+- [🔄 Workflow Guide](docs/WORKFLOW_GUIDE.md)  
+- [🔧 MCP Build Guide](docs/HOW_TO_BUILD_MCP_PLAYWRIGHT.md)
+- [📍 Data Locations](docs/DATA_LOCATIONS_MAP.md)
+- [📋 System Overview](docs/SYSTEM_OVERVIEW.md)
+
+## 🤝 **Contributing**
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 **Links**
+
+- [GitHub Repository](https://github.com/royavrahami/websight-analyzer-ai-public)
+- [Issue Tracker](https://github.com/royavrahami/websight-analyzer-ai-public/issues)
+- [Documentation](docs/)
+
+## 🙏 **Acknowledgments**
+
+- Microsoft MCP Team
+- Playwright Community
+- Python Testing Community
+- Open Source Contributors
+
+---
+
+## 🎯 **Legacy Content**
+
+> The content below is from the original README and maintained for reference.
 
 ### Main Entry Points
 
 1. **Enhanced Master Automation** (Primary Interface)
-   ```bash
-   python enhanced_master_automation.py https://example.com
-   ```
-
-2. **GUI Interface** (User-Friendly Interface)
-   ```bash
-   python gui/web_analyzer_gui.py
-   ```
-
-3. **Examples** (Learning and Testing)
-   ```bash
-   python examples/demo_enhanced_automation.py
-   ```
-
-## 🔧 Installation
-
-```bash
-# Clone the repository
-git clone <repository-url>
-cd playwright-mcp-analyzer-new
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Install Playwright browsers
-playwright install
-```
-
-## 📊 Features
-
-### ✅ Microsoft MCP Integration
-- **Accessibility-First Analysis** - Prioritizes accessibility tree over screenshots
-- **LLM Integration** - Ready for ChatGPT, Claude, and other AI models
-- **Production Standards** - Microsoft-grade architecture
-
-### ✅ Comprehensive Analysis
-- **Multi-Browser Testing** - Chromium, Firefox, WebKit
-- **Performance Analysis** - Load times, resource usage
-- **Security Scanning** - Vulnerability detection
-- **SEO Analysis** - Search engine optimization
-
-### ✅ Automated Test Generation
-- **API Tests** - Endpoint validation
-- **UI Tests** - Interface interaction testing
-- **Functional Tests** - Business logic validation  
-- **GUI Tests** - Visual layout testing
-- **E2E Tests** - Complete user journey testing
-
-### ✅ Professional Reports
-- **HTML Reports** - Interactive visual reports
-- **JSON Data** - Machine-readable results
-- **VS Code Integration** - IDE launch configurations
-- **CI/CD Ready** - Integration with automation pipelines
-
-## 📖 Usage Guide
-
-### Basic Analysis
-```python
-import asyncio
-from enhanced_master_automation import EnhancedAutomationFramework
-
-async def run_analysis():
-    # Initialize framework
-    framework = EnhancedAutomationFramework("https://example.com")
-    
-    # Run complete analysis
-    results = await framework.run_enhanced_automation(
-        browsers=['chromium'],
-        use_microsoft_mcp=True,
-        include_ai_analysis=True
-    )
-    return results
-
-# Execute the analysis
-results = asyncio.run(run_analysis())
-print(f"Analysis completed! Results saved to: {results.get('output_dir', 'Unknown')}")
-```
-
-### Integration Examples
-```python
-import asyncio
-from integrations.microsoft_mcp_integration import MCPPlaywrightServer
-
-async def run_mcp_integration():
-    # Microsoft MCP Integration
-    # Create MCP server
-    server = MCPPlaywrightServer({'browser': 'chromium'})
-    await server.start()
-    
-    try:
-        # Navigate and analyze
-        nav_result = await server.handle_tool_call("browser_navigate", {"url": "https://example.com"})
-        snapshot = await server.handle_tool_call("browser_snapshot", {})
-        
-        print("Navigation successful!")
-        print(f"Snapshot captured: {len(snapshot)} elements found")
-        
-    finally:
-        # Clean up server
-        await server.stop()
-
-# Execute the MCP integration
-asyncio.run(run_mcp_integration())
-```
-
-### GUI Interface
-```python
-# Launch GUI directly
-import subprocess
-import sys
-
-# Run the GUI interface
-subprocess.run([sys.executable, "gui/web_analyzer_gui.py"])
-```
-
-## 🎯 Key Benefits
-
-### For QA Engineers
-- **Faster Test Creation** - AI-powered test generation
-- **Better Coverage** - Microsoft accessibility standards
-- **Professional Output** - Enterprise-grade reports
-
-### For Developers
-- **Early Detection** - Catch issues before production
-- **Accessibility Compliance** - WCAG AA/AAA standards
-- **Performance Insights** - Optimization recommendations
-
-### For Teams
-- **Standardized Process** - Consistent testing approach
-- **Knowledge Sharing** - Comprehensive documentation
-- **Tool Integration** - Works with existing workflows
-
-## 🔗 Integration Points
-
-### Development Tools
-- **VS Code** - Launch configurations and snippets
-- **Git** - Version control integration
-- **CI/CD** - Automated pipeline integration
-
-### External Services
-- **Microsoft MCP** - Latest accessibility standards
-- **LLM APIs** - AI-powered analysis
-- **Reporting Tools** - Custom output formats
-
-## 📚 Documentation
-
-- **[Automation Guide](docs/AUTOMATION_GUIDE.md)** - Complete automation tutorial
-- **[Workflow Guide](docs/WORKFLOW_GUIDE.md)** - Step-by-step processes  
-- **[System Overview](docs/SYSTEM_OVERVIEW.md)** - Architecture details
-- **[Build Guide](docs/HOW_TO_BUILD_MCP_PLAYWRIGHT.md)** - Setup instructions
-- **[Data Locations](docs/DATA_LOCATIONS_MAP.md)** - Output file reference
-
-## 🏗️ Architecture
-
-The system follows a modular architecture:
-- **Entry Layer** - Main scripts and GUI interfaces
-- **Automation Layer** - Core automation frameworks  
-- **Integration Layer** - External service connectors
-- **Analysis Layer** - Data processing and insights
-- **Output Layer** - Reports and generated tests
-
-## 🤝 Contributing
-
-1. Follow the existing directory structure
-2. Add comprehensive documentation
-3. Include example usage
-4. Maintain English language standards
-5. Test with multiple browsers
-
-## 📋 Requirements
-
-- Python 3.8+
-- Node.js 16+ (for MCP server)
-- Playwright browsers
-- Optional: Anthropic API key (for AI analysis)
-
-## 🔄 Updates
-
-The project is actively maintained with:
-- Regular security updates
-- New browser compatibility
-- Enhanced AI capabilities
-- Improved reporting features
-
----
-
-**Author:** Roy Avrahami - Senior QA Automation Architect  
-**License:** MIT  
-**Version:** 2.0 - Professional Edition
