@@ -1,13 +1,13 @@
-# 🚀 **WebSight Analyzer AI - Professional Edition**
+# 🚀 **WebSight Analyzer - Professional Edition**
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-brightgreen.svg)](https://python.org)
-[![Playwright](https://img.shields.io/badge/playwright-latest-orange.svg)](https://playwright.dev)
+[![Playwright](https://img.shields.io/badge/playwright-integrated-orange.svg)](https://playwright.dev)
 [![MCP](https://img.shields.io/badge/MCP-integrated-purple.svg)](https://github.com/microsoft/mcp)
 
 ## 🎯 **Project Overview**
 
-**WebSight Analyzer AI** is a professional-grade automation framework that combines Microsoft's MCP (Model Context Protocol) with comprehensive web analysis capabilities. This system provides accessibility-first testing, automated test generation, API hunting, and production-ready QA tools.
+**WebSight Analyzer** is a professional-grade automation framework for comprehensive web analysis and testing. This system integrates multiple technologies including Playwright, Microsoft's MCP (Model Context Protocol), and AI-powered automation to provide accessibility-first testing, automated test generation, API hunting, and production-ready QA tools.
 
 ### ✨ **Key Features**
 
@@ -75,7 +75,7 @@ results = analyzer.analyze_url("https://example.com")
 ## 📁 **Project Structure**
 
 ```
-websight-analyzer-ai-public/
+websight-analyzer/
 ├── 📂 gui/                  # 🖥️ Professional GUI Interface
 │   └── web_analyzer_gui.py  # Main GUI application
 ├── 📂 core/                 # 🔧 Core Analysis Modules
@@ -236,6 +236,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [GitHub Repository](https://github.com/royavrahami/websight-analyzer-ai-public)
 - [Issue Tracker](https://github.com/royavrahami/websight-analyzer-ai-public/issues)
 - [Documentation](docs/)
+- [Official Website](https://royavrahami.github.io/websight-analyzer-ai-public/)
 
 ## 🙏 **Acknowledgments**
 
