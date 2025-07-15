@@ -1,0 +1,60 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "🚀 GUI Launcher",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/gui/web_analyzer_gui.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "purpose": ["debug-in-terminal"]
+        },
+        {
+            "name": "🎯 Quick Analysis - Example.com",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/enhanced_master_automation.py",
+            "args": ["https://example.com"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "🌐 Full Analysis - Custom URL",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/enhanced_master_automation.py",
+            "args": ["${input:websiteUrl}", "--full-analysis"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "🔧 Debug Mode",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/enhanced_master_automation.py",
+            "args": ["https://example.com", "--debug"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "stopOnEntry": false,
+            "justMyCode": false
+        },
+        {
+            "name": "📋 Run Example Demo",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/examples/demo_enhanced_automation.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "websiteUrl",
+            "description": "Enter website URL to analyze",
+            "default": "https://example.com",
+            "type": "promptString"
+        }
+    ]
+} 

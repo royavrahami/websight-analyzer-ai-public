@@ -1,0 +1,33 @@
+{
+    "python.defaultInterpreterPath": "./venv/Scripts/python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "black",
+    "python.analysis.typeCheckingMode": "basic",
+    "files.associations": {
+        "*.py": "python"
+    },
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "playwright.showTrace": false,
+    "playwright.reuseBrowser": false,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/node_modules": true,
+        "**/.venv": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/__pycache__": true,
+        "**/.venv": true
+    },
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "emmet.includeLanguages": {
+        "html": "html"
+    },
+    "cursorpyright.analysis.typeCheckingMode": "basic"
+} 
