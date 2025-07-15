@@ -20,6 +20,7 @@ import logging
 import platform
 import webbrowser
 import time
+from queue import Queue, Empty
 
 # Add parent directory to path for imports when running from gui/ directory
 current_dir = Path(__file__).parent.absolute()
@@ -868,7 +869,7 @@ class WebAnalyzerGUI:
         # Variables
         self.url_var = tk.StringVar(value="https://example.com")
         self.output_var = tk.StringVar(
-            value="./reports")
+            value=str(parent_dir / "reports"))
         self.headless_var = tk.BooleanVar(value=True)
         self.csv_export_var = tk.BooleanVar(value=True)
         self.html_report_var = tk.BooleanVar(value=True)
@@ -922,6 +923,16 @@ class WebAnalyzerGUI:
         self.qa_orchestrator = None
 
         self.create_gui()
+
+        # Initialize the log queue for thread-safe logging
+        self.log_queue = Queue()
+        
+        # Start the queue poller for thread-safe logging
+        self.poll_log_queue()
+        
+        # Initial log message
+        self.log_message("✅ WebSight Analyzer ready!")
+        self.log_message("📋 Configure settings and click 'START ANALYSIS'")
 
         # Initialize API Hunter after GUI is ready
         if API_HUNTER_AVAILABLE:
@@ -1139,10 +1150,6 @@ class WebAnalyzerGUI:
 
         # Status bar
         self.create_status_bar()
-
-        # Initialize log
-        self.log_message("✅ WebSight Analyzer ready!")
-        self.log_message("📋 Configure settings and click 'START ANALYSIS'")
 
         # Add API Hunter section after GUI is complete
         if API_HUNTER_AVAILABLE and not hasattr(self, '_api_hunter_added'):
@@ -1709,8 +1716,25 @@ class WebAnalyzerGUI:
                                    font=('Segoe UI', 9))
         timestamp_label.pack(side='right', padx=15)
 
-    def log_message(self, message):
-        """Add message to log with hyperlink support"""
+    def log_message(self, message: str):
+        """Add a message to the thread-safe queue to be logged."""
+        if not hasattr(self, 'log_queue'):
+            self.log_queue = Queue()
+        self.log_queue.put(message)
+
+    def poll_log_queue(self):
+        """Periodically check the log queue and update the GUI from the main thread."""
+        try:
+            while True:
+                message = self.log_queue.get_nowait()
+                self._process_log_message(message)
+        except Empty:
+            pass
+        finally:
+            self.root.after(100, self.poll_log_queue)
+
+    def _process_log_message(self, message: str):
+        """This method actually updates the GUI and should only be called from the main thread."""
         if not hasattr(self, 'log_text') or self.log_text is None:
             return
         try:
@@ -4108,7 +4132,8 @@ Basic crawling analysis created. For advanced multi-page crawling:
         self.is_running = False
         print("🎉 [UI-RESET] UI reset completed")
 
-    def _create_basic_test_suite(self, analysis_dir):
+    @staticmethod
+    def _create_basic_test_suite(analysis_dir):
         """Create basic test suite structure when QA Automation is not available"""
         from pathlib import Path
         import json
