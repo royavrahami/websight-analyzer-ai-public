@@ -4369,11 +4369,23 @@ def main():
     try:
         print("🚀 Starting WebSight Analyzer GUI...")
         app = WebAnalyzerGUI()
-        app.run()
+        try:
+            app.run()
+        except KeyboardInterrupt:
+            print("👋 Received KeyboardInterrupt (Ctrl+C). Closing application...")
+            # Attempt to clean up as would from a window close
+            if hasattr(app, 'root'):
+                # simulate GUI close (triggers on_closing)
+                app.root.event_generate("<<ForceClose>>")
+                try:
+                    app.root.destroy()
+                except Exception:
+                    pass
     except Exception as e:
         print(f"❌ Fatal error starting GUI: {e}")
         import traceback
         traceback.print_exc()
+        import sys
         sys.exit(1)
 
 if __name__ == "__main__":
