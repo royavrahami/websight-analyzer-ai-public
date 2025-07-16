@@ -1,14 +1,14 @@
 {
-  "timestamp": "2025-07-15T21:29:34.995947",
-  "output_dir": "C:\\Users\\Roy Avrahami\\OneDrive\\PycharmProjects\\autoamtion_tools_roy\\playwright-mcp-analyzer-playwright-mcp-analyzer-new (1)\\playwright-mcp-analyzer-playwright-mcp-analyzer-new\\gui\\reports\\analysis_20250715_212932\\analysis_example_com_20250715_212934",
-  "url": "https://example.com",
-  "domain": "example_com",
-  "page_title": "Example Domain",
+  "timestamp": "2025-07-16T15:31:48.564941",
+  "output_dir": "C:\\Users\\Roy Avrahami\\OneDrive\\PycharmProjects\\autoamtion_tools_roy\\playwright-mcp-analyzer-playwright-mcp-analyzer-new (1)\\playwright-mcp-analyzer-playwright-mcp-analyzer-new\\reports\\analysis_20250716_153145\\analysis_www_linkedin_com_20250716_153146",
+  "url": "https://www.linkedin.com/in/roy-avrahami-%C2%A9%EF%B8%8F-37009a16/",
+  "domain": "www_linkedin_com",
+  "page_title": "Unknown (Error: Execution context was destroyed, most likely because of a navigation)",
   "urls": [
-    "https://example.com"
+    "https://www.linkedin.com/in/roy-avrahami-%C2%A9%EF%B8%8F-37009a16/"
   ],
   "dates": [
-    "2025/07/15"
+    "2025/07/16"
   ],
   "analysis_type": "single_page"
 }
