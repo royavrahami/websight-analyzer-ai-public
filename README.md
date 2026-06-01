@@ -179,16 +179,21 @@ export ANTHROPIC_API_KEY="your-key-here"
 
 ## 🧪 **Testing**
 
-Run the included tests:
-```bash
-# Run all tests
-pytest
+Install the package and run the test suite (no browser needed — the tests
+verify the package-import structure and the test-generation engine):
 
-# Run specific test categories
-pytest tests/test_core.py
-pytest tests/test_gui.py
-pytest tests/test_integrations.py
+```bash
+pip install -e ".[dev]"
+pytest tests/ -q
 ```
+
+```
+tests/test_imports.py ........        # core modules import as core.*, full analyzer loads
+tests/test_qa_generator.py .....      # generated QA suites are valid Python
+13 passed
+```
+
+CI runs the suite on every push/PR (see `.github/workflows/quality.yml`).
 
 ## 🚀 **Advanced Features**
 
