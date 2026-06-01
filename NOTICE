@@ -1,0 +1,20 @@
+websight-analyzer-ai-public
+Copyright (c) 2025 Roy Avrahami
+Licensed under the MIT License (see LICENSE).
+
+------------------------------------------------------------------------------
+Third-party components
+------------------------------------------------------------------------------
+
+This repository vendors the following third-party component, which is NOT
+covered by this project's MIT license and retains its own license:
+
+  playwright_mcp_server/
+    Component : @playwright/mcp (Playwright MCP server), version 0.0.28
+    Author    : Microsoft Corporation
+    Source    : https://github.com/microsoft/playwright-mcp
+    License   : Apache License 2.0 (see playwright_mcp_server/LICENSE)
+
+The Apache-2.0 license and its terms apply to all files under
+`playwright_mcp_server/`. No modifications to the upstream source are claimed
+by this project; it is included verbatim for convenience.

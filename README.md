@@ -66,10 +66,10 @@ python scripts/working_crawler.py -u https://example.com -o results/
 
 #### 3. **🔧 Direct Core Integration**
 ```python
-from core.integrated_web_analyzer import WebAnalyzer
+from core.integrated_web_analyzer import IntegratedWebElementAnalyzer
 
-analyzer = WebAnalyzer()
-results = analyzer.analyze_url("https://example.com")
+analyzer = IntegratedWebElementAnalyzer(headless=True)
+output_dir = analyzer.analyze_url("https://example.com")
 ```
 
 ## 📁 **Project Structure**
