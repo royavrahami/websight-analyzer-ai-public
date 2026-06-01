@@ -6,7 +6,7 @@ Requirements:
 - Environment variable ANTHROPIC_API_KEY or .env file
 
 Basic usage:
-from advanced_analysis import analyze_with_claude
+from core.advanced_analysis import analyze_with_claude
 result = analyze_with_claude("טקסט לבדיקה", task="summarize")
 print(result)
 """

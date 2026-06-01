@@ -71,10 +71,10 @@ except ImportError:
     print("Then install browser binaries: playwright install")
     sys.exit(1)  # Use sys.exit now that it's imported
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-
-# from advanced_analysis import APIClient, claude_analyze, run_claude_tool  # הוסר כי לא קיים
+# Sibling core modules are imported via their fully-qualified ``core.<module>``
+# names (see integrated_web_analyzer / web_element_spider), so no runtime
+# sys.path manipulation is required here.
 
 
 def _clean_variable_name(name: str) -> str:

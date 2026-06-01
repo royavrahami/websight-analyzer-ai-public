@@ -26,9 +26,11 @@ from scrapy.exceptions import CloseSpider
 
 # Import Web Element Analyzer
 try:
-    from playwright_web_elements_analyzer_fixed_v2 import WebElementAnalyzer
+    # Preferred: resolve as a package submodule (no sys.path manipulation needed).
+    from core.playwright_web_elements_analyzer import WebElementAnalyzer
 except ImportError:
     try:
+        # Fallback for standalone/script execution with core/ on sys.path.
         from playwright_web_elements_analyzer import WebElementAnalyzer
     except ImportError:
         raise ImportError("Web Element Analyzer not found. Please ensure it's in your Python path.")

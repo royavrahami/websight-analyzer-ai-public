@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "websight-analyzer"
+version = "0.1.0"
+description = "Playwright/MCP-based web analysis and QA automation toolkit"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Roy Avrahami" }]
+keywords = ["playwright", "qa", "automation", "web-analysis", "mcp", "selectors"]
+
+# Mirrors requirements.txt. Keep the two in sync.
+dependencies = [
+    "playwright>=1.40.0",
+    "scrapy>=2.12.0",
+    "requests>=2.32.0",
+    "beautifulsoup4>=4.11.1",
+    "pydantic>=2.11.4",
+    "anthropic>=0.51.0",
+    "python-dotenv>=1.0.0",
+    "selenium>=4.18.1",
+    "httpx>=0.28.0",
+    "pandas>=2.2.3",
+    "ttkthemes>=3.2.2",
+    "typing-extensions>=4.13.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-playwright>=0.7.0",
+    "ruff>=0.4.0",
+    "mypy>=1.10.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/royavrahami/websight-analyzer-ai-public"
+
+# The importable Python packages. Other top-level folders (gui/, scripts/,
+# client/) are run as scripts, not imported as packages, so they are excluded.
+[tool.setuptools]
+packages = ["core", "integrations"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+# The vendored Microsoft MCP server and Node deps are not ours to lint.
+extend-exclude = ["playwright_mcp_server", "playwright-test", "node_modules"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+# Pre-existing style in this codebase; tighten incrementally.
+ignore = ["E501", "E402"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-q"

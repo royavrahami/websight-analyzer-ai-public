@@ -39,11 +39,11 @@ except ImportError:
 # Attempt to import our modules
 try:
     # Import core functionality
-    from playwright_web_elements_analyzer import WebElementAnalyzer
-    
+    from core.playwright_web_elements_analyzer import WebElementAnalyzer
+
     # Import extension classes
-    from element_detection_extensions import AdvancedDetectionExtensions
-    from output_extensions import OutputExtensions
+    from core.element_detection_extensions import AdvancedDetectionExtensions
+    from core.output_extensions import OutputExtensions
     
     # Create integrated class
     class IntegratedWebElementAnalyzer(WebElementAnalyzer, AdvancedDetectionExtensions, OutputExtensions):
